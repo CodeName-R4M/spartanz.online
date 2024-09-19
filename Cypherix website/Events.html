@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Styles.css" />
+    <script src="Script.js"></script>
+    <title>Spartanz</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script>document.addEventListener('DOMContentLoaded', () => {
+      const isDesktop = window.innerWidth > 768; // Detect if it's desktop view
+    
+      if (isDesktop) {
+        document.querySelectorAll('.card').forEach(card => {
+          card.addEventListener('click', () => {
+            card.classList.toggle('flipped');
+          });
+        });
+      }
+    });
+    
+    // Listen for window resize to adjust behavior dynamically
+    window.addEventListener('resize', () => {
+      const isDesktop = window.innerWidth > 768;
+      const cards = document.querySelectorAll('.card');
+    
+      if (isDesktop) {
+        cards.forEach(card => {
+          card.addEventListener('click', () => {
+            card.classList.toggle('flipped');
+          });
+        });
+      } else {
+        // Optionally, remove the event listeners if switching to mobile
+        cards.forEach(card => {
+          card.removeEventListener('click', () => {
+            card.classList.toggle('flipped');
+          });
+        });
+      }
+    });
+    document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('click', () => {
+    card.classList.toggle('flipped');
+  });
+}); 
+  </script>
+  </head>
+  <body>
+    <video id="backgroundVideo" autoplay muted loop>
+      <source
+        src="/images/WebsiteBG.mp4"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+    <header class="navbar">
+      <div class="logo">
+        <img
+          src="/images/Cypherix.png"
+          alt="Cypherix Logo"
+          style="height: 15vh"
+        />
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <img src="/images/thumb.png" alt="" />
+      </div>
+      <nav class="nav-links">
+        <a href="/index.html">Home</a>
+        <a href="/Events.html" class="selected">Events</a>
+        <a href="/Teams.html">Teams</a>
+        <a href="#">Contact Us</a>
+      </nav>
+      <nav class="nav-links mobile-menu">
+        <a href="/index.html">Home</a>
+        <a href="/Events.html" class="selected">Events</a>
+        <a href="/Teams.html">Teams</a>
+        <a href="#">Contact Us</a>
+      </nav>
+    </header>
+    <main id="event-main">
+      <img class="TechLogo" src="/images/Techlogo.jpg" alt="" />
+      <section id="events">
+        <div class="outer-par">
+        <div class="card">
+          <p class="Desc">Coordinator:J.Sujatha <a href="tel:+919500015518">&phone;9500015518</a></p>
+          <div class="event" style='background-image: url(/images/paper_presentation.jpg);background-position: center;background-size:cover;'>
+          </div>
+          <div class="backside techbg">
+            <h3>RULES FOR Innovation Pitch</h3>
+            <li>
+              <ul>Team should contain <b>1-2 members</b></ul>
+              <ul>Time for presentation  is 7 minutes</ul>
+              <ul>Atmost of slides should be atmost 12</ul>
+              <ul>Participant must come to the venue by 9:15</ul>
+              <ul>Participants should have their ppt prior during presentation.</ul>
+              <ul>Participants must provide a soft copy of paper in proper alignment justified.</ul>
+            </li>
+          </div>
+        </div>
+        </div>
+        <div class="outer-par">
+        <div class="card">
+          <p class="Desc">Coordinator:N.Sriram <a href="tel:+918015916569">&phone;8015916569</a></p>
+          <div class="event" style="background-image: url(/images/FlagRush.png);background-position: center;background-size: cover;">
+          </div>
+          <div class="backside techbg">
+            <h3>RULES FOR Flag Rush</h3>
+            <p><li><ul> <u>Round 1</u>: Paper Test - Participants will complete a written test.The top scorers advance to Round 2.</ul>
+              <ul><u>Round 2</u>: Jeopardy Style - Individuals will solve challenges in various categories with increasing difficulty and point values.</ul>
+              <ul><b><u>No Collaboration</u><b> - Collaboration is strictly prohibited. Any form of collaboration will result in immediate disqualification.</ul></li></p>
+          </div>
+        </div>
+        </div>
+        <div class="outer-par">
+        <div class="card">
+          <p class="Desc">Coordinator:R.Jayasri <a href="tel:+916383478468">&phone;6383478468</a></p>
+          <div class="event" style="background-image:url(/images/CodeBreachLogo.jpg);background-position: center;background-size:cover ;">
+          </div>
+          <div class="backside techbg" >
+            <h3>RULES FOR Code Breach</h3>
+            <p><li>
+              <ul>Team Size:1-2 participants per team.</ul>
+              <ul><b>Round 1</b>: Aptitude Test
+              Top-scoring teams qualify for Round 2.</ul>
+              <ul><b>Round 2</b>: Debugging Challenge
+              Judging will be based on errors corrected, time taken, and output correctness.</ul>
+              <ul><b>Code of Conduct</b>:
+              Professional conduct is mandatory. Misconduct may lead to disqualification.</ul></li></p>
+          </div>
+        </div>
+        </div>
+      </section>
+      <img class="NTechLogo" src="/images/NonTechLogo.jpg">
+      <section id="NTevents">
+        <div class="outer-par">
+        <div class="card">
+          <p class="Desc">Coordinator:V.Vaishnavi <a href="tel:+919043830463" style="text-decoration: none;">9043830463</a></p>
+          <div class="event" style="background-image: url(/images/CryptoChaseLogo.jpg);background-position: center;background-size: cover;">
+          </div>
+          <div class="backside" style="background-image: url(/images/CryptoChaseBGjpgjpg.jpg);background-position: center;background-size: cover;color: white;">
+            <h3>RULES FOR Crypto Chase</h3>
+            <p>
+            <li>
+              <ul>A maximum of 1-4 members per team can participate.</ul>     
+              <ul>Each team gets a list of items to find or tasks to complete.</ul>
+              <ul>The time limit for the hunt is 1 hour.</ul>
+              <ul>Teams must return to the starting point by the time limit.</ul>
+              <ul>The team with the most points wins.</ul>
+            </li></p>
+          </div>
+        </div>
+        </div>
+        <div class="outer-par">
+        <div class="card">
+          <p class="Desc">Coordinator:R.Sridhar<a href="tel:+917845142385">7845142385</a></p>
+          <div class="event" style="background-image:url(/images/HackAndAct.jpg);background-position: center;background-size:cover ;">
+          </div>
+          <div class="backside" style="background-image: url(/images/hackandactbg.jpg);background-size: cover;background-position: center;color:lavender;">
+            <h3>RULES FOR Hack And Act</h3>
+            <P><li><ul>Maximum 2-3 members per team.</ul>
+              <ul>One player acts out a word or phrase.</ul>
+              <ul>1-2 minutes per turn.
+              1 point for each correct guess.</ul>
+              <ul>Participants should arrive at 9 am in the venue.</ul>
+              <ul>Most points win!</ul></li></P>
+          </div>
+        </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
