@@ -33,7 +33,7 @@ body {
 /* Flex Layout for Desktop */
 .nav-links {
   display: flex;
-  gap: 20px; /* Space between the nav links */
+  gap: 20px;
 }
 
 .nav-links a {
@@ -191,8 +191,6 @@ body {
   height: 35vw;
   transform-style: preserve-3d;
   transition: transform 600ms ease-in-out;
-  /* margin-top: 10vh; */
-  /* margin-bottom: 10vh; */
   transform-origin: center;
   font-size: 2.5vw;
   cursor: pointer;
@@ -211,11 +209,6 @@ body {
   perspective: 1000px;
   backface-visibility: hidden;
   position: absolute;
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  z-index: 1; */
 }
 
 .backside {
@@ -230,12 +223,15 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /* margin-bottom: 10vh; */
-  /* margin-top: 5vh; */
   transform: rotateY(180deg);
 }
 .backside li {
   text-align: center;
+}
+.Heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .Desc {
   font-size: 1.75vw;
@@ -291,7 +287,6 @@ body {
   justify-content: space-around;
   align-items: center;
   gap: 20px;
-  padding: 20px;
   margin-top: 5vh;
   clear: both;
   position: relative;
@@ -352,7 +347,10 @@ body {
     display: flex;
   }
   #event-main {
-    display: block;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
   }
   #events .event:nth-child(3) {
     grid-column: auto;
@@ -380,9 +378,9 @@ body {
     height: 20vh;
   }
   .outer-par {
-    width: 50vw;
-    height: 70vw;
-    margin-left: 10vh;
+    width: 65vw;
+    height: 80vw;
+    /* margin-left: 10vh; */
   }
   .card {
     border-left: 15vh;
@@ -390,12 +388,13 @@ body {
     margin-top: auto;
     background-color: #37b7c3;
     border-radius: 8px;
-    width: 50vw;
-    height: 70vw;
+    width: 65vw;
+    height: 80vw;
     color: white;
     perspective: 1000px;
     backface-visibility: hidden;
     display: block;
+    position: absolute;
     /* align-items: center;
     justify-content: center;
     flex-direction: column; */
@@ -407,7 +406,7 @@ body {
   }
 
   .Desc {
-    font-size: 3vw;
+    font-size: 3.5vw;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -415,10 +414,10 @@ body {
   }
   .event {
     background-color: #37b7c3;
-    padding: 20px;
+    /* padding: 20px; */
     border-radius: 8px;
-    width: 50vw;
-    height: 70vw;
+    width: 65vw;
+    height: 80vw;
     color: white;
     perspective: 1000px;
     backface-visibility: hidden;
@@ -428,15 +427,18 @@ body {
 
   .backside {
     font-size: 1.5vw;
-    padding: 20px;
+    /* padding: 20px; */
     border-radius: 8px;
-    width: 50vw;
-    height: 70vw;
+    width: 65vw;
+    height: 80vw;
     color: white;
     perspective: 1000px;
     backface-visibility: hidden;
     position: absolute;
     margin-bottom: 10vh;
-    font-size: 4vw;
+    font-size: 150%;
+  }
+  .Heading {
+    font-size: 125%;
   }
 }
