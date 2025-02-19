@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spartanz</title>
+    <link rel="stylesheet" href="../css/Styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Uchen&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="js/Script.js"></script>
+    <style>
+      /* Ensure particles cover the entire viewport */
+      #particles-js {
+        position: fixed; /* Fixed positioning */
+        top: 0; /* Start from the top */
+        left: 0; /* Start from the left */
+        width: 100%;
+        height: 100%;
+        z-index: -1; /* Ensure it stays behind other content */
+        pointer-events: none; /* Allow mouse events to pass through */
+      }
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden; /* Prevent scrolling on the body */
+      }
+      #content {
+        position: relative;
+        z-index: 1; /* Ensure content is above particles */
+        overflow-y: auto; /* Enable vertical scrolling */
+        height: 100vh; /* Full viewport height */
+      }
+      main {
+        padding: 20px; /* Add some padding to the main content */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Add the Particles.js container -->
+    <div id="particles-js"></div>
+
+    <!-- Scrollable content area -->
+    <div id="content">
+      <header class="navbar">
+        <div class="logo">
+          <img id="logooo" src="/images/Cypherix.png" alt="NPSBCET Logo" />
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+          <img src="/images/thumb.png" alt="" />
+        </div>
+        <nav class="nav-links">
+          <a href="#" class="selected">Home</a>
+          <a href="/events">Events</a>
+          <a href="/teams">Teams</a>
+          <a href="#">Contact Us</a>
+        </nav>
+        <nav class="nav-links mobile-menu">
+          <a href="#" class="selected">Home</a>
+          <a href="/events">Events</a>
+          <a href="#">Teams</a>
+          <a href="/teams">Contact Us</a>
+        </nav>
+      </header>
+
+      <main id="home-main">
+        <div id="poster-section">
+          <div id="pos-img">
+            <img
+              src="/images/spartanz2k25logo.jpg"
+              alt="Cypherix 2024 Poster"
+              id="spart"
+              style="border-radius: 100%"
+            />
+          </div>
+          <br />
+          <div id="a111">
+            <p class="symp-nam">Spartanz 2K24</p>
+          </div>
+        </div>
+        <div class="Regdiv">
+          <button
+            onclick="window.location.href='events';"
+            class="RegisterButton"
+          >
+            Register Now
+          </button>
+        </div>
+        <section class="welcome">
+          <h2>Welcome to Spartanz 2K24</h2>
+          <p>
+            Join us for the premier cybersecurity symposium where industry
+            leaders, experts, and enthusiasts come together to explore the
+            latest trends, challenges, and innovations in cybersecurity.
+          </p>
+        </section>
+        <div id="tech-des">
+          <h2>Technical Events🧑‍💻</h2>
+          Gear up for an intense showdown at SPARTANZ, the cybersecurity
+          symposium where only the best thrive! Crack codes in CTF, craft
+          stunning interfaces in UI Designing, debug like a pro in Debugging,
+          test your knowledge in the Technical Quiz, and present groundbreaking
+          ideas in Paper Presentation. Whether you're a hacker, designer, or
+          innovator, the battlefield is set. Do you have what it takes to
+          conquer SPARTANZ?⚡
+        </div>
+      </main>
+    </div>
+
+    <!-- Load the Particles.js library -->
+    <script src="/../particles.min.js"></script>
+
+    <!-- Initialize Particles.js with your JSON configuration -->
+    <script>
+      particlesJS.load(
+        "particles-js",
+        "/../particlesjs-config.json",
+        function () {
+          console.log("Particles.js configuration loaded successfully!");
+        }
+      );
+    </script>
+  </body>
+</html>
