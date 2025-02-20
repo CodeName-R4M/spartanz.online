@@ -469,7 +469,9 @@ body {
   .nav-links {
     display: none;
   }
-
+  .navbar{
+    position: fixed;
+  }
   .nav-links.mobile-menu {
     display: none; /* Hidden by default */
   flex-direction: column;
