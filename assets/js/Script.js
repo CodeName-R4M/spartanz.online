@@ -1,6 +1,11 @@
 function toggleMenu() {
   const navLinks = document.querySelector('.nav-links.mobile-menu');
-  navLinks.classList.toggle('active');
+
+  if (navLinks) {
+    navLinks.classList.toggle('active');
+  } else {
+    console.error("Menu element not found! Check if '.nav-links.mobile-menu' exists in HTML.");
+  }
 }
 
 // document.querySelectorAll('.event').forEach(event => {

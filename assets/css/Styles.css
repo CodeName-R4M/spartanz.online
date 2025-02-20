@@ -88,16 +88,28 @@ body {
 
 /* Hamburger Styling */
 .hamburger {
-  display: none; /* Hidden by default */
-  font-size: 24px; /* Size of the hamburger icon */
-  cursor: pointer;
-  /* Pointer cursor on hover */
+  display: none; /* Hide by default */
+    cursor: pointer;
+    width: 40px; /* Ensure visibility */
+    height: 40px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 100;
+}
+.hamburger img{
+  width: 100%;
+  height: 100%;
 }
 .logo img {
   margin-top: 2vh;
   margin-bottom: 2vh;
   margin-left: 2vw;
   height: 15vh;
+}
+
+.navbar img {
+  height: 5vh;
 }
 #spart {
   height: 40px;
@@ -233,15 +245,33 @@ body {
 }
 #events {
   /* display: grid; */
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
-  gap: 3vw;
+  flex-direction: column;
+  /* gap: 3vw; */
   align-items: center;
-  justify-content: space-around;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  /* justify-content: space-around; */
+  /* grid-template-columns: repeat(2, 1fr); */
+  gap: 50px;
   /* margin-left: 3vw; */
   /* padding: 20px; */
+}
+.event-row {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+}
+.center-card {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.non-tech-logo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 150vh;
+  /* margin-top: 80px; Ensures proper spacing */
 }
 .TechLogo {
   height: 50vh;
@@ -251,8 +281,6 @@ body {
   width: 30vw;
   height: 35vw;
   transform-style: preserve-3d;
-  transition: transform 600ms ease-in-out;
-  transform-origin: center;
   font-size: 2.5vw;
   cursor: pointer;
   display: flex;
@@ -260,6 +288,7 @@ body {
   align-items: center;
   background-color: green;
   box-shadow: none;
+  border-radius: 8px;
 }
 .event {
   background-color: #37b7c3;
@@ -270,6 +299,8 @@ body {
   perspective: 1000px;
   backface-visibility: hidden;
   position: absolute;
+  background-size: cover;
+  background-position: center;
 }
 
 .backside {
@@ -323,11 +354,11 @@ body {
   transform: rotateY(180deg);
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
 } */
-#events .event:nth-child(3) {
+/* #events .event:nth-child(3) {
   grid-column: 1 / -1;
   justify-self: center;
   width: 50%;
-}
+} */
 .TechLogo {
   margin-top: 10vh;
 }
@@ -344,6 +375,7 @@ body {
 
 #NTevents {
   display: flex;
+  flex-direction: column;
   /* grid-template-columns: repeat(2, 1fr); */
   justify-content: space-around;
   align-items: center;
@@ -351,6 +383,13 @@ body {
   margin-top: 5vh;
   clear: both;
   position: relative;
+}
+
+.sub-nav{
+  z-index: 2000;
+  display: flex;
+  justify-content: space-between;
+  /* margin-top: 20vh; */
 }
 /* Technical page's css start from here */
 #tech-he {
@@ -416,7 +455,14 @@ body {
   }
 
   .hamburger {
-    display: block; /* Show hamburger icon on small screens */
+    display: block; /* Ensure it's shown on mobile */
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 2000; 
   }
 
   /* Hide default navbar links on mobile */
@@ -425,26 +471,24 @@ body {
   }
 
   .nav-links.mobile-menu {
-    display: none; /* Hide mobile menu by default */
+    display: none; /* Hidden by default */
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: #2e2e2e;
+  z-index: 1000; /* Ensure it's above other content */
   }
 
   .nav-links.mobile-menu.active {
     display: flex; /* Show menu when active */
   }
-  .hamburger {
-    display: block;
+  .sub-nav{
+    flex-wrap: wrap;
   }
-
-  .nav-links {
-    display: none;
-  }
-
-  .nav-links.mobile-menu {
-    display: none;
-  }
-
-  .nav-links.mobile-menu.active {
-    display: flex;
+  .sub-nav{
+    white-space:nowrap;
   }
   .tech-des h2 {
     color: beige;
@@ -455,8 +499,11 @@ body {
     color: beige;
     font-family: "Poppins", sans-serif;
   }
-  #non-tech-ha{
+  #non-tech-ha {
     font-size: 3.5vh;
+  }
+  .menu-toggle{
+    display: block;
   }
   #event-main {
     display: flex;
@@ -464,18 +511,27 @@ body {
     align-items: center;
     flex-direction: column;
   }
-  #events .event:nth-child(3) {
+  /* #events .event:nth-child(3) {
     grid-column: auto;
     justify-self: stretch;
     width: auto;
-  }
+  } */
   #events {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
     align-items: center;
     position: relative;
     left: 0;
     margin-top: 5vh;
-    height: 140vh;
+    /* height: 140vh; */
+  }
+  .event-row {
+    display: flex;
+    flex-direction: column; /* Makes events appear one per row */
+    gap: 30px; /* Increased gap between events */
+    align-items: center;
+    width: 100%;
   }
   .TechLogo {
     height: 30vh;
@@ -486,6 +542,10 @@ body {
     text-align: center;
     gap: 5px;
     margin-top: 20vh;
+    
+  }
+  .non-tech-logo-container {
+    margin-top: 0;
   }
   #NTevents {
     display: block;
@@ -502,7 +562,11 @@ body {
     /* margin-left: 10vh; */
   }
   .card {
-    border-left: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border-left: 15vh; */
     margin-bottom: 30vh;
     margin-top: auto;
     background-color: #37b7c3;
@@ -513,7 +577,8 @@ body {
     perspective: 1000px;
     backface-visibility: hidden;
     display: block;
-    position: absolute;
+    /* position: absolute; */
+
     /* align-items: center;
     justify-content: center;
     flex-direction: column; */
@@ -533,15 +598,19 @@ body {
   }
   .event {
     background-color: #37b7c3;
+    display: flex;
+    flex-direction: column;
+    gap: 100vh;
     /* padding: 20px; */
     border-radius: 8px;
-    width: 65vw;
-    height: 80vw;
+    width: 100%;
+    height: 100%;
     color: white;
     perspective: 1000px;
     backface-visibility: hidden;
     position: absolute;
     margin-bottom: 10vh;
+    /* gap: 100px; */
   }
 
   .backside {

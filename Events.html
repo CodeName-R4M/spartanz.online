@@ -1,145 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/Styles.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/Styles.css">
     <script src="assets/js/Script.js"></script>
     <script src="assets/particles.min.js"></script>
     <script>
-      particlesJS.load("particles-js", "assets/particlesjs-config.json", function () {
-        console.log("Particles.js configuration loaded successfully!");
-      });
+        particlesJS.load("particles-js", "assets/particlesjs-config.json", function () {
+            console.log("Particles.js configuration loaded successfully!");
+        });
     </script>
     <title>Spartanz</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
-  <body>
-    <!-- <video id="backgroundVideo" autoplay muted loop>
-      <source
-        src="/assets/images/WebsiteBG.mp4"
-        type="video/mp4"
-      />
-      Your browser does not support the video tag.
-    </video> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
     <header class="navbar">
-      <div class="logo">
-        <img
-          id="logooo"
-          src="/assets/images/Cypherix.png"
-          alt="Cypherix Logo"
-        />
-      </div>
-      <div class="hamburger" onclick="toggleMenu()">
-        <img src="/assets/images/thumb.png" alt="" />
-      </div>
-      <nav class="nav-links">
-        <a href="/">Home</a>
-        <a href="/Events.html" class="selected">Events</a>
-        <a href="/teams">Teams</a>
-        <a href="#">Contact Us</a>
-      </nav>
-      <nav class="nav-links mobile-menu">
-        <a href="/">Home</a>
-        <a href="/Events.html" class="selected">Events</a>
-        <a href="/teams">Teams</a>
-        <a href="#">Contact Us</a>
-      </nav>
+        <div class="logo">
+            <img id="logooo" src="/assets/images/Cypherix.png" alt="Cypherix Logo">
+        </div>
+        <div class="hamburger menu-toggle" onclick="toggleMenu()">
+            <img src="/assets/images/thumb.png" alt="">
+        </div>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/Events.html" class="selected">Events</a>
+            <a href="/teams">Teams</a>
+            <a href="#">Contact Us</a>
+        </nav>
+        <nav class="nav-links mobile-menu">
+            <a href="/">Home</a>
+            <a href="/Events.html" class="selected">Events</a>
+            <a href="/teams">Teams</a>
+            <a href="#">Contact Us</a>
+        </nav>
     </header>
+
     <main id="event-main">
-      <img class="TechLogo" src="/assets/images/Techlogo.jpg" alt="" />
-      <section id="events">
-        <div class="outer-par">
-          <div class="card" onclick="window.location.href='/tech.html';">
-            <p onclick="event.stopPropagation()" class="Desc no-flip">
-              Coordinator:J.Sujatha
-              <a href="tel:+919500015518">&phone;9500015518</a>
-            </p>
-            <div
-              class="event"
-              style="
-                background-image: url(/assets/images/paper_presentation.jpg);
-                background-position: center;
-                background-size: cover;
-              "
-            ></div>
+        <img class="TechLogo" src="/assets/images/Techlogo.jpg" alt="">
+        
+        <section id="events">
+            <div class="event-row">
+                <div class="card" onclick="window.location.href='/tech.html';">
+                    <p class="Desc">Coordinator: J.Sujatha <a href="tel:+919500015518">9500015518</a></p>
+                    <div class="event" style="background-image: url(/assets/images/paper_presentation.jpg);"></div>
+                </div>
+                <div class="card" onclick="window.location.href='tech.html';">
+                    <p class="Desc">Coordinator: N.Sriram <a href="tel:+918015916569">8015916569</a></p>
+                    <div class="event" style="background-image: url(/assets/images/FlagRush.png);"></div>
+                </div>
             </div>
-          </div>
+            <div class="event-row">
+                <div class="card" onclick="window.location.href='tech.html';">
+                    <p class="Desc">Coordinator: R.Jayasri <a href="tel:+916383478468">6383478468</a></p>
+                    <div class="event" style="background-image: url(/assets/images/CodeBreachLogo.jpg);"></div>
+                </div>
+                <div class="card" onclick="window.location.href='tech.html';">
+                    <p class="Desc">Coordinator: Placeholder <a href="#">0000000000</a></p>
+                    <div class="event" style="background-image: url(/assets/images/Placeholder.jpg);"></div>
+                </div>
+            </div>
+            <div class="center-card">
+                <div class="card" onclick="window.location.href='tech.html';">
+                    <p class="Desc">Coordinator: Placeholder <a href="#">0000000000</a></p>
+                    <div class="event" style="background-image: url(/assets/images/Placeholder.jpg);"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fixed Non-Tech Logo Position -->
+        <div class="non-tech-logo-container">
+            <img class="NTechLogo" src="/assets/images/NonTechLogo.jpg">
         </div>
-        <div class="outer-par">
-          <div class="card" onclick="window.location.href='tech.html';">
-            <p onclick="event.stopPropagation()" class="Desc no-flip">
-              Coordinator:N.Sriram
-              <a href="tel:+918015916569">&phone;8015916569</a>
-            </p>
-            <div
-              class="event"
-              style="
-                background-image: url(/assets/images/FlagRush.png);
-                background-position: center;
-                background-size: cover;
-              "
-            ></div>
-          </div>
-        </div>
-        <div class="outer-par">
-          <div class="card">
-            <p onclick="window.location.href='tech.html';" class="Desc no-flip">
-              Coordinator:R.Jayasri
-              <a href="tel:+916383478468">&phone;6383478468</a>
-            </p>
-            <div
-              class="event"
-              style="
-                background-image: url(/assets/images/CodeBreachLogo.jpg);
-                background-position: center;
-                background-size: cover;
-              "
-            ></div>
-          </div>
-        </div>
-      </section>
-      <img class="NTechLogo" src="/assets/images/NonTechLogo.jpg" />
-      <section id="NTevents">
-        <div class="outer-par">
-          <div class="card">
-            <p onclick="window.location.href='non-tech.html';" class="Desc no-flip">
-              Coordinator:V.Vaishnavi
-              <a href="tel:+919043830463" style="text-decoration: none"
-                >9043830463</a
-              >
-            </p>
-            <div
-              class="event"
-              style="
-                background-image: url(/assets/images/CryptoChaseLogo.jpg);
-                background-position: center;
-                background-size: cover;
-              "
-            ></div>
-          </div>
-        </div>
-        <div class="outer-par">
-          <div class="card">
-            <p onclick="window.location.href='non-tech.html';" class="Desc no-flip">
-              Coordinator:R.Sridhar<a href="tel:+917845142385">7845142385</a>
-            </p>
-            <div
-              class="event"
-              style="
-                background-image: url(/assets/images/HackAndAct.jpg);
-                background-position: center;
-                background-size: cover;
-              "
-            ></div>
-          </div>
-        </div>
-      </section>
+
+        <section id="NTevents">
+            <div class="event-row">
+                <div class="card" onclick="window.location.href='non-tech.html';">
+                    <p class="Desc">Coordinator: V.Vaishnavi <a href="tel:+919043830463">9043830463</a></p>
+                    <div class="event" style="background-image: url(/assets/images/CryptoChaseLogo.jpg);"></div>
+                </div>
+                <div class="card" onclick="window.location.href='non-tech.html';">
+                    <p class="Desc">Coordinator: R.Sridhar <a href="tel:+917845142385">7845142385</a></p>
+                    <div class="event" style="background-image: url(/assets/images/HackAndAct.jpg);"></div>
+                </div>
+            </div>
+            <div class="event-row">
+                <div class="card" onclick="window.location.href='non-tech.html';">
+                    <p class="Desc">Coordinator: Placeholder <a href="#">0000000000</a></p>
+                    <div class="event" style="background-image: url(/assets/images/Placeholder.jpg);"></div>
+                </div>
+                <div class="card" onclick="window.location.href='non-tech.html';">
+                    <p class="Desc">Coordinator: Placeholder <a href="#">0000000000</a></p>
+                    <div class="event" style="background-image: url(/assets/images/Placeholder.jpg);"></div>
+                </div>
+            </div>
+            <div class="center-card">
+                <div class="card" onclick="window.location.href='non-tech.html';">
+                    <p class="Desc">Coordinator: Placeholder <a href="#">0000000000</a></p>
+                    <div class="event" style="background-image: url(/assets/images/Placeholder.jpg);"></div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <div id="particles-js"></div>
-  </body>
+</body>
 </html>
