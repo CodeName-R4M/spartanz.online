@@ -168,7 +168,7 @@ body {
   transform: translateX(-50%);
 }
 .welcome {
-  padding-left: 10vh;
+  /* padding-left: 1vw; */
   padding-top: 5vh;
   text-align: left;
 }
@@ -189,9 +189,14 @@ body {
   z-index: -1; /* Keeps it behind other content */
   pointer-events: none; /* Allows mouse events to pass through */
 }
-#tech-des {
+.tech-des h2 {
   color: beige;
   font-family: "Uchen", serif;
+  font-size: 7vh;
+}
+.tech-des {
+  color: beige;
+  font-family: "Poppins", sans-serif;
 }
 #event-main {
   margin-top: 5vh;
@@ -314,10 +319,10 @@ body {
   bottom: 0;
   opacity: 0.9;
 }
-.card.flipped {
+/* .card.flipped {
   transform: rotateY(180deg);
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
-}
+} */
 #events .event:nth-child(3) {
   grid-column: 1 / -1;
   justify-self: center;
@@ -441,6 +446,18 @@ body {
   .nav-links.mobile-menu.active {
     display: flex;
   }
+  .tech-des h2 {
+    color: beige;
+    font-family: "Uchen", serif;
+    font-size: 4vh;
+  }
+  .tech-des {
+    color: beige;
+    font-family: "Poppins", sans-serif;
+  }
+  #non-tech-ha{
+    font-size: 3.5vh;
+  }
   #event-main {
     display: flex;
     justify-content: space-around;
@@ -502,10 +519,10 @@ body {
     flex-direction: column; */
     margin-bottom: 10vh;
   }
-  .card:hover {
+  /* .card:hover {
     transform: rotateY(180deg);
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
-  }
+  } */
 
   .Desc {
     font-size: 3.5vw;

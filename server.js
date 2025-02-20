@@ -1,39 +1,26 @@
-const express = require("express");
-const path = require("path");
+const express = require('express');
+const { exec } = require('child_process');
+const path = require('path');
+
 const app = express();
-const PORT = 5000;
+const PORT = 6900;
 
-// Serve static files from the 'assets' directory
-app.use(express.static(path.join(__dirname, "assets")));
+// Serve static files (HTML, CSS, JS, images)
+app.use(express.static(__dirname));
 
-// Route for the homepage
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "assets", "html pages", "index.html"));
+// PHP Handler (Assumes PHP is installed and in system PATH)
+app.get('/*.php', (req, res) => {
+    const phpFile = path.join(__dirname, req.path);
+    exec(`php ${phpFile}`, (error, stdout, stderr) => {
+        if (error) {
+            res.status(500).send(`PHP Error: ${stderr}`);
+            return;
+        }
+        res.send(stdout);
+    });
 });
 
-// Route for events page
-app.get("/events", (req, res) => {
-  res.sendFile(path.join(__dirname, "assets", "html pages", "Events.html"));
-});
-
-// Route for teams page
-app.get("/teams", (req, res) => {
-  res.sendFile(path.join(__dirname, "assets", "html pages", "Teams.html"));
-});
-
-// Route for tech page
-app.get("/tech", (req, res) => {
-  res.sendFile(path.join(__dirname, "assets", "html pages", "tech.html"));
-});
-
-// Catch-all route for 404 errors
-app.use((req, res) => {
-  res
-    .status(404)
-    .send("404 Not Found - The page you are looking for doesn't exist.");
-});
-
-// Start the server
+// Start server
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`Server running at http://localhost:${PORT}`);
 });
