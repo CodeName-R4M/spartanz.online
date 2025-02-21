@@ -1,152 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="icon" type="image/png" href="/assets/images/ico.png">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Non-Technical Events</title>
     <link rel="stylesheet" href="assets/css/Styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Uchen&display=swap"
-      rel="stylesheet"
-    />
     <script src="assets/js/Script.js"></script>
-    <style>
-      #particles-js {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        pointer-events: none;
-      }
-      body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #000;
-        color: white;
-      }
-      main {
-        padding: 20px;
-        text-align: center;
-      }
-      .event-container {
-        background: #0d2d36;
-        margin: 20px auto;
-        padding: 20px;
-        border-radius: 10px;
-        width: 90%;
-        max-width: 400px;
-      }
-      .event-container img {
-        width: 80px;
-        display: block;
-        margin: 0 auto;
-      }
-      .event-title {
-        font-size: 20px;
-        font-weight: bold;
-        margin: 10px 0;
-      }
-      .event-rules {
-        font-size: 14px;
-        text-align: left;
-      }
-      .register-btn {
-  display: block;
-  width: 100%;
-  background-color: #1e88e5; /* A deep blue matching the theme */
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-  margin-top: 10px;
-}
-.register-btn:hover {
-  background-color: #1565c0; /* Slightly darker blue for hover */
-}
-    </style>
-  </head>
-  <body>
-    <div id="particles-js"></div>
-    <header style="position: fixed;" class="navbar">
-      <div class="logo">
-        <img id="logooo" src="/assets/images/Cypherix.png" alt="NPSBCET Logo" />
-      </div>
-      <!-- <div class="hamburger menu-toggle" onclick="toggleMenu()">
-        <img src="/assets/images/thumb.png" alt="">
-    </div>
-    <nav class="nav-links">
-        <a href="/">Home</a>
-        <a href="/Events.html" class="selected">Events</a>
-        <a href="/teams">Teams</a>
-        <a href="#">Contact Us</a>
-    </nav>
-    <nav class="nav-links mobile-menu">
-        <a href="/">Home</a>
-        <a href="/Events.html" class="selected">Events</a>
-        <a href="/teams">Teams</a>
-        <a href="#">Contact Us</a>
-    </nav> -->
-    
-    <nav class="sub-nav">
-        <div  style="display: flex;justify-content: left;cursor: pointer;">
-          <a href="Events.html">< Go Back </a>
-        </div>
-        <div>
-          <a href="tech.html">
-          Tech Events >
-          </a>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <div id="tech-he">
-        <p id="tech-wo">Non-Technical</p>
-        <p id="events-wo">Events</p>
-      </div>
-      <div class="event-container">
-        <img src="/assets/images/paper_presentation.jpg" alt="Innovation Pitch" />
-        <p class="event-title">RULES FOR INNOVATION PITCH</p>
-        <p class="event-rules">
-          - Team should contain 1-3 members.<br />
-          - Time for presentation is 8 minutes.<br />
-          - At most 7 slides allowed.<br />
-          - Participants should have their PPT ready.<br />
-          - Provide a soft copy of the paper.
-        </p>
-        <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfNPdGSe29XVu8kq9xSlaspO-PIqonIxTN2r80sIt-eovuPpg/viewform?usp=dialog', '_blank')" class="register-btn">Register Now</button>
-      </div>
-      <div class="event-container">
-        <img src="/assets/images/FlagRush.png" alt="Flag Rush" />
-        <p class="event-title">RULES FOR FLAG RUSH</p>
-        <p class="event-rules">
-          - Round 1: Paper Test. Top scorers advance.<br />
-          - Round 2: Jeopardy-style challenges.<br />
-          - No collaboration allowed.
-        </p>
-        <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfNPdGSe29XVu8kq9xSlaspO-PIqonIxTN2r80sIt-eovuPpg/viewform?usp=dialog', '_blank')" class="register-btn">Register Now</button>
-      </div>
-      <div class="event-container">
-        <img src="/assets/images/CodeBreachLogo.jpg" alt="Code Bleach" />
-        <p class="event-title">RULES FOR CODE BLEACH</p>
-        <p class="event-rules">
-          - Team size: 1-2 participants.<br />
-          - Round 1: Aptitude Test.<br />
-          - Round 2: Debugging Challenge.<br />
-          - Professional conduct is mandatory.
-        </p>
-        <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfNPdGSe29XVu8kq9xSlaspO-PIqonIxTN2r80sIt-eovuPpg/viewform?usp=dialog', '_blank')" class="register-btn">Register Now</button>
-      </div>
-    </main>
     <script src="assets/particles.min.js"></script>
     <script>
       particlesJS.load(
@@ -157,5 +16,378 @@
         }
       );
     </script>
+    <title>Non-Technical Events</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar" style="display: flex;flex-direction: column;" >
+      <div class="logo" style="display: flex;justify-content: left;width: 100%;">
+        <img
+          id="logooo"
+          src="/assets/images/Cypherix.png"
+          alt="Cypherix Logo"
+        />
+      </div>
+      <nav style="width: 100%; display: flex; flex-direction: row">
+        <div
+          onclick="window.location.href='Events.html'"
+          style="
+            display: flex;
+            justify-content: left;
+            color: white;
+            width: 100%;">
+          < Go Back
+        </div>
+        <div
+          onclick="window.location.href='tech.html'"
+          style="
+            display: flex;
+            justify-content: right;
+            color: white;
+            width: 100%;">
+          Tech Events >
+        </div>
+      </nav>
+    </header>
+    <div id="separator"></div>
+    <div style="display: flex;justify-content: center;">
+      <!-- <img class="TechLogo" src="/assets/images/Techlogo.jpg" alt=""> -->
+      <div class="tech-he">
+        <div class="tech-wo">Non-Technical</div>
+        <div class="events-wo">Events</div>
+      </div>
+      </div>
+    <!-- EVENT 1 -->
+    <div
+      class="event-container"
+      style="
+        background-image: url(/assets/images/chase-bg.jpg);
+        position: relative;
+        padding-top: 12vh;
+      "
+    >
+      <!-- <img
+        style="
+          display: block;
+          margin: 0 auto;
+          position: absolute;
+          top: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+          height: 10vh;
+          width: 10vh;
+        "
+        src="/assets/images/ppt.jpg"
+        alt=""/> -->
+      <p class="event-title">RULES FOR CRYPTO CHASE</p>
+      <p class="event-rules">
+        A maximum of 1-3 members per team can participate. <br>
+        Each team gets a list of items to find or tasks to complete. <br>
+        Teams must return to the starting point by the time limit. <br>
+        The team with the most points wins. <br>
+      </p>
+      <a class="rega" href="https://docs.google.com/forms/d/e/1FAIpQLSfNPdGSe29XVu8kq9xSlaspO-PIqonIxTN2r80sIt-eovuPpg/viewform?usp=dialog" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 0 15px rgba(255, 87, 34, 1)';"
+      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 10px rgba(255, 87, 34, 0.8)';">Register now</a>
+    </div>
+
+    <!-- EVENT 2 -->
+    <div
+      class="event-container"
+      style="
+        background-image: url(/assets/images/guess-bg.jpg);
+        position: relative;
+        padding-top: 12vh;
+      "
+    >
+      <!-- <img
+        style="
+          display: block;
+          margin: 0 auto;
+          position: absolute;
+          top: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+          height: 10vh;
+          width: 10vh;
+        "
+        src="/assets/images/ppt.jpg"
+        alt=""/> -->
+      <p class="event-title">RULES FOR GUESS-O-MANIA</p>
+      <p class="event-rules">
+        A maximum of 1-3 members per team can participate. <br>
+        Each team gets a list of items to find or tasks to complete. <br>
+        Teams must return to the starting point by the time limit. <br>
+        The team with the most points wins. <br>
+      </p>
+    </div>
+
+    <!-- EVENT 3 -->
+    <div
+      class="event-container"
+      style="
+        background-image: url(/assets/images/pictq-bg.jpg);
+        position: relative;
+        padding-top: 12vh;
+      "
+    >
+      <img
+        style="
+          display: block;
+          margin: 0 auto;
+          position: absolute;
+          top: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+          height: 10vh;
+          width: 10vh;
+        "
+        src="/assets/images/pctoq.jpg"
+        alt=""/>
+      <p class="event-title">RULES FOR PICTOQUEST</p>
+      <p class="event-rules">
+        A maximum of 1-3 members per team can participate. <br>
+        Each team gets a list of items to find or tasks to complete. <br>
+        Teams must return to the starting point by the time limit. <br>
+        The team with the most points wins. <br>
+      </p>
+      <a class="rega" href="https://docs.google.com/forms/d/e/1FAIpQLSfNPdGSe29XVu8kq9xSlaspO-PIqonIxTN2r80sIt-eovuPpg/viewform?usp=dialog" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 0 15px rgba(255, 87, 34, 1)';"
+      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 10px rgba(255, 87, 34, 0.8)';">Register now</a>
+    </div>
+
+    <!-- EVENT 4 (PLACEHOLDER) -->
+    <div
+      class="event-container"
+      style="
+        background-image: url(/assets/images/esc-bg.jpg);
+        position: relative;
+        padding-top: 12vh;
+      "
+    >
+      <img
+        style="
+          display: block;
+          margin: 0 auto;
+          position: absolute;
+          top: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+          height: 10vh;
+          width: 10vh;
+        "
+        src="/assets/images/esc-room.jpg"
+        alt=""/>
+      <p class="event-title">RULES FOR AI ESCAPE ROOM</p>
+      <p class="event-rules">
+        A maximum of 1-3 members per team can participate. <br>
+        Each team gets a list of items to find or tasks to complete. <br>
+        Teams must return to the starting point by the time limit. <br>
+        The team with the most points wins. <br>
+      </p>
+      <a class="rega" href="https://docs.google.com/forms/d/e/1FAIpQLSfNPdGSe29XVu8kq9xSlaspO-PIqonIxTN2r80sIt-eovuPpg/viewform?usp=dialog" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 0 15px rgba(255, 87, 34, 1)';"
+      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 10px rgba(255, 87, 34, 0.8)';">Register now</a>
+    </div>
+
+    <!-- EVENT 5 (PLACEHOLDER) -->
+    <div
+      class="event-container"
+      style="
+        background-image: url(/assets/images/ff-bg.jpg);
+        position: relative;
+        padding-top: 12vh;
+      "
+    >
+      <img
+        style="
+          display: block;
+          margin: 0 auto;
+          position: absolute;
+          top: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+          height: 10vh;
+          width: 10vh;
+        "
+        src="/assets/images/ff.jpg"
+        alt=""/>
+      <p class="event-title">RULES FOR FREE-FIRE</p>
+      <p class="event-rules">
+        A maximum of 1-3 members per team can participate. <br>
+        Each team gets a list of items to find or tasks to complete. <br>
+        Teams must return to the starting point by the time limit. <br>
+        The team with the most points wins. <br>
+      </p>
+      <a class="rega" href="https://docs.google.com/forms/d/e/1FAIpQLSfNPdGSe29XVu8kq9xSlaspO-PIqonIxTN2r80sIt-eovuPpg/viewform?usp=dialog" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 0 15px rgba(255, 87, 34, 1)';"
+      onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 10px rgba(255, 87, 34, 0.8)';">Register now</a>
+    </div>
+    <div id="particles-js"></div>
+    <style>
+      /* Navbar styles */
+      /* .navbar {
+          padding-right: 5px;
+          position: fixed;
+          top: 0;
+          right: 0;
+          left: 0;
+          background-color: rgba(0, 0, 0, 0.8);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 20px;
+          z-index: 1000;
+          margin-right: 2vh;
+      } */
+      .navbar img {
+        margin-right: 2vh;
+      }
+
+      /* Hero Section */
+      .hero-section {
+        text-align: center;
+        margin-top: 100px;
+        color: white;
+        font-weight: bold;
+        font-family: Arial, sans-serif;
+      }
+
+      .hero-section h1 {
+        font-size: 50px;
+        margin: 0;
+      }
+
+      .hero-section h2 {
+        font-size: 40px;
+        margin: 10px 0;
+      }
+
+      /* Event Containers */
+      .event-container {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px auto;
+        height: 50vh;
+        width: 80%;
+        max-width: 600px;
+        text-align: center;
+        color: white;
+        font-family: Arial, sans-serif;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(5px);
+        background-position: center;
+        background-size: cover;
+      }
+
+      .event-title {
+        font-size: 22px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      .event-rules {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+
+        .hamburger {
+          display: block;
+        }
+
+        .hero-section h1 {
+          font-size: 40px;
+        }
+
+        .hero-section h2 {
+          font-size: 30px;
+        }
+
+        .event-container {
+          width: 80%;
+          /* padding: 15px; */
+        }
+
+        .event-title {
+          font-size: 20px;
+        }
+
+        .event-rules {
+          font-size: 16px;
+          font-family: 'Poppins';
+        }
+      }
+      @keyframes glitch {
+  0% { text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff; }
+  25% { text-shadow: -2px -2px #ff00ff, 2px 2px #00ffff; }
+  50% { text-shadow: 2px -2px #ff00ff, -2px 2px #00ffff; }
+  75% { text-shadow: -2px 2px #ff00ff, 2px -2px #00ffff; }
+  100% { text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff; }
+}
+
+@keyframes flicker {
+  0% { opacity: 1; }
+  20% { opacity: 0.8; }
+  40% { opacity: 1; }
+  60% { opacity: 0.9; }
+  80% { opacity: 1; }
+  100% { opacity: 0.7; }
+}
+
+.tech-he {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.5);
+}
+
+.tech-wo, .events-wo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0ff;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border: 2px solid #0ff;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  animation: flicker 1.5s infinite alternate;
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-wo:hover, .events-wo:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 20px #0ff;
+  animation: glitch 0.2s infinite;
+}
+
+.tech-wo::before, .events-wo::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.tech-wo:hover::before, .events-wo:hover::before {
+  transform: scaleX(1);
+}
+
+    </style>
   </body>
 </html>

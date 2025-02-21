@@ -23,6 +23,9 @@ body {
   top: 0;
   left: 0;
   z-index: 2;
+  /* backdrop-filter: blur(20px); */
+  /* background-color: #800020; */
+  /* background: linear-gradient(to bottom, #2FCADB, #4e9aa9, #607071); */
   backdrop-filter: blur(20px);
 }
 
@@ -211,7 +214,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 #event-main {
-  margin-top: 5vh;
+  margin-top: 20vh;
   /* display: flex;
   flex-wrap: wrap;
   flex-direction: column; */
@@ -270,12 +273,12 @@ body {
 .non-tech-logo-container {
   display: flex;
   justify-content: center;
-  margin-top: 150vh;
+  /* margin-top: 150vh; */
   /* margin-top: 80px; Ensures proper spacing */
 }
-.TechLogo {
+/* .TechLogo {
   height: 50vh;
-}
+} */
 .card {
   position: relative;
   width: 30vw;
@@ -338,6 +341,9 @@ body {
   bottom: 0;
   z-index: 2;
 }
+#an{
+  font-size: 1.5vw;
+}
 .techbg::before {
   content: "";
   background-image: url("/assets/images/BG.webp");
@@ -359,9 +365,10 @@ body {
   justify-self: center;
   width: 50%;
 } */
-.TechLogo {
+/* .TechLogo {
   margin-top: 10vh;
-}
+} */
+
 .NTechLogo {
   object-fit: cover;
   height: 50vh;
@@ -392,25 +399,46 @@ body {
   /* margin-top: 20vh; */
 }
 /* Technical page's css start from here */
-#tech-he {
-  margin-top: 30vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  font-size: 60px;
-  font-weight: bold;
+.tech-he {
+  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
-  position: relative;
-}
-#tech-wo {
-  color: white;
-  font-weight: 700;
-}
-#events-wo {
-  color: #00c9a7;
   font-weight: 900;
-  position: relative;
+  letter-spacing: 2px;
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+  opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards, glitch 2s infinite;
+}
+.tech-wo {
+  color: white;
+  font-size: 7vw;
+  animation: flicker 2s infinite alternate;
+}
+.events-wo {
+  color: #00c9a7;
+  font-size: 7vw;
+  animation: flicker 2s infinite alternate-reverse;
+  /* position: relative; */
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Glitch effect */
+@keyframes glitch {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-2px); }
+  40% { transform: translateX(2px); }
+  60% { transform: translateX(-1px); }
+  80% { transform: translateX(1px); }
+  100% { transform: translateX(0); }
+}
+
+/* Neon Flicker Effect */
+@keyframes flicker {
+  0% { opacity: 1; text-shadow: 0px 0px 10px rgba(0, 255, 150, 0.9); }
+  50% { opacity: 0.8; text-shadow: 0px 0px 20px rgba(0, 255, 150, 0.7); }
+  100% { opacity: 1; text-shadow: 0px 0px 30px rgba(0, 255, 150, 1); }
 }
 .okiii {
   font-size: 5vh;
@@ -422,10 +450,31 @@ body {
   margin-left: 15vw;
   font-size: 3vh;
 }
+#separator{
+  margin-top: 24vh;
+}
+.event-rules{
+  overflow-y: auto;
+  max-height: 35vh;
+  text-align: left;
+}
+.rega{
+  display: block;
+     width: fit-content;
+     margin: 20px auto 0;
+     padding: 12px 24px;
+     font-size: 18px;
+     font-weight: bold;
+     color: white;
+     background: linear-gradient(45deg, #ff5722, #ff9800);
+     border: none;
+     border-radius: 8px;
+     text-align: center;
+     text-decoration: none;
+     box-shadow: 0 0 10px rgba(255, 87, 34, 0.8);
+     transition: transform 0.2s, box-shadow 0.2s;
+}
 @media (max-width: 768px) {
-  .TechLogo {
-    margin-top: 10vh;
-  }
   #home-main {
     margin-top: 15vh;
   }
@@ -486,12 +535,12 @@ body {
   .nav-links.mobile-menu.active {
     display: flex; /* Show menu when active */
   }
-  .sub-nav{
+  /* .sub-nav{
     flex-wrap: wrap;
-  }
-  .sub-nav{
+  } */
+  /* .sub-nav{
     white-space:nowrap;
-  }
+  } */
   .tech-des h2 {
     color: beige;
     font-family: "Uchen", serif;
@@ -505,6 +554,7 @@ body {
     font-size: 3.5vh;
   }
   .menu-toggle{
+    z-index: 1000000000;
     display: block;
   }
   #event-main {
@@ -512,6 +562,7 @@ body {
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    margin-top: 15vh;
   }
   /* #events .event:nth-child(3) {
     grid-column: auto;
@@ -548,6 +599,10 @@ body {
   }
   .non-tech-logo-container {
     margin-top: 0;
+  }
+  .navbar{
+    position: fixed;
+    display: block;
   }
   #NTevents {
     display: block;
@@ -598,6 +653,9 @@ body {
     justify-content: center;
     align-items: center;
   }
+  #an{
+    font-size: 3vw;
+  }
   .event {
     background-color: #37b7c3;
     display: flex;
@@ -631,4 +689,8 @@ body {
   .Heading {
     font-size: 125%;
   }
+  
+#separator{
+  margin-top: 18vh;
+}
 }
